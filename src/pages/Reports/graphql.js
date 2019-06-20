@@ -19,7 +19,18 @@ export const GET_REPORTS = gql`
         referenceResourceId
         referenceResourceType
       }
+      isResolved
       created
+    }
+  }
+`;
+
+export const SUBSCRIBE_TO_REPORTS_CHANGED = gql`
+  subscription reportChanged {
+    reportChanged {
+      state
+      isResolved
+      id
     }
   }
 `;
